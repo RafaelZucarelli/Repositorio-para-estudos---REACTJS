@@ -6,6 +6,7 @@ const ConditionalRender: React.FC = () => {
   return (
     <div>
       <h1>Isso será exibido?</h1>
+      {/*CONDIÇÃO EM REACTJS*/}
       {x && <p>Se x for true, sim!</p>}
     </div>
   );
