@@ -2,6 +2,7 @@ import "./App.css";
 import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
+import Container from "./components/Container";
 
 function App() {
   const cars = [
@@ -30,6 +31,9 @@ function App() {
             km={car.km}
           />
         ))}
+        <Container>
+          <p>Este é o conteúdo</p>
+        </Container>
       </div>
     </>
   );
