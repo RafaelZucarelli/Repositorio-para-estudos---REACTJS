@@ -3,6 +3,7 @@ import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
 import Container from "./components/Container";
+import ExecuteFunction from "./components/ExecuteFunction";
 
 function App() {
   const cars = [
@@ -10,6 +11,10 @@ function App() {
     { id: 2, brand: "Renault", color: "Blue", newCar: true, km: 1400000 },
     { id: 3, brand: "Nissan", color: "Black", newCar: true, km: 18000000 },
   ];
+
+  function showMessage() {
+    console.log("Evento do componente pai");
+  }
   return (
     <>
       <h1>Hello World!</h1>
@@ -25,6 +30,7 @@ function App() {
         {/*LOOP EM ARRAY DE OBJETOS */}
         {cars.map((car) => (
           <CarDetails
+            key={car.id}
             brand={car.brand}
             color={car.color}
             newCar={car.newCar}
@@ -34,6 +40,7 @@ function App() {
         <Container>
           <p>Este é o conteúdo</p>
         </Container>
+        <ExecuteFunction myFunction={showMessage} />
       </div>
     </>
   );
