@@ -12,7 +12,10 @@ function App() {
         {/*PROPS */}
         <ShowUserName name="Rafael" />
         {/*DESTRUCTURING */}
-        <CarDetails brand="Fiat" km={1000000} color="Azul" />
+        <CarDetails brand="Fiat" km={1000000} color="Blue" newCar={false} />
+        {/*REAPROVEITAMENTO DE COMPONENTES */}
+        <CarDetails brand="VW" km={0} color="RED" newCar={true} />
+        <CarDetails brand="Ford" km={1000000} color="Wiite" newCar={false} />
       </div>
     </>
   );

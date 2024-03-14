@@ -4,9 +4,15 @@ interface CarDetailsProps {
   brand: string;
   km: number;
   color: string;
+  newCar: boolean;
 }
 
-const CarDetails: React.FC<CarDetailsProps> = ({ brand, km, color }) => {
+const CarDetails: React.FC<CarDetailsProps> = ({
+  brand,
+  km,
+  color,
+  newCar,
+}) => {
   return (
     <div>
       <h2>Detalhes do carro:</h2>
@@ -15,6 +21,7 @@ const CarDetails: React.FC<CarDetailsProps> = ({ brand, km, color }) => {
         <li>KM: {km}</li>
         <li>Cor: {color}</li>
       </ul>
+      {newCar && <p>Esse carro é 0KM.</p>}
     </div>
   );
 };
