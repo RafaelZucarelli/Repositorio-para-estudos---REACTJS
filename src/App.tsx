@@ -7,6 +7,7 @@ import ExecuteFunction from "./components/ExecuteFunction";
 import { useState } from "react";
 import Message from "./components/Message";
 import UserDetails from "./components/UserDetails";
+import MyForm from "./components/MyForm";
 
 function App() {
   const cars = [
@@ -60,6 +61,9 @@ function App() {
             profissao={pessoa.profissao}
           />
         ))}
+
+        <h2>Forms</h2>
+        <MyForm />
       </div>
     </>
   );
